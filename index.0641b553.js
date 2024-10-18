@@ -584,28 +584,51 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"bNKaB":[function(require,module,exports) {
-const container = document.querySelector("#container");
-const containerRect = container.getBoundingClientRect();
-const resizeHandler = ()=>{
-    // scale, keep container aspect ratio
-    const scale = Math.min(window.innerWidth / containerRect.width, window.innerHeight / containerRect.height);
-    container.style.transformOrigin = "0 0";
-    container.style.transform = `scale(${scale})`;
-    container.style.width = `${containerRect.width}px`;
-    container.style.height = `${containerRect.height}px`;
-    // center
-    //container.style.left = `${(window.innerWidth - containerRect.width * scale) / 2}px`;
-    //container.style.top = `${(window.innerHeight - containerRect.height * scale) / 2}px`;
-    container.style.left = `${(window.innerWidth - 1111 * scale) / 2}px`;
-    container.style.top = `${(window.innerHeight - 1132 * scale) / 2}px`;
-    container.style.position = "absolute";
+window.onload = function() {
+    let currentScene = 0;
+    const scenes = [
+        "scene-1",
+        "scene-1",
+        "scene-1",
+        "scene-1",
+        "scene-2",
+        "scene-3",
+        "scene-2",
+        "scene-3",
+        "scene-2",
+        "scene-3",
+        "scene-2",
+        "scene-3",
+        "scene-4",
+        "scene-4",
+        "scene-4",
+        "scene-4",
+        "scene-2",
+        "scene-3",
+        "scene-2",
+        "scene-3",
+        "scene-2",
+        "scene-3",
+        "scene-2",
+        "scene-3"
+    ];
+    const nextScene = ()=>{
+        currentScene++;
+        document.body.className = scenes[currentScene % scenes.length];
+    };
+    setInterval(nextScene, 1200);
+    const audioButton = document.getElementById("audio");
+    audioButton.addEventListener("click", ()=>{
+        const audio = document.querySelector("audio");
+        if (audio.paused) {
+            audio.play();
+            audioButton.className = "unmuted";
+        } else {
+            audio.pause();
+            audioButton.className = "muted";
+        }
+    });
 };
-window.addEventListener("resize", resizeHandler);
-resizeHandler();
-window.addEventListener("load", ()=>{
-    // make visible
-    container.style.opacity = 1;
-});
 
 },{}]},["awhe7","bNKaB"], "bNKaB", "parcelRequireaa92")
 

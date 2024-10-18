@@ -1,25 +1,69 @@
+* {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 html, body {
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
 }
 
 body {
   background-color: #fedd6a;
-  overflow: hidden;
 }
 
-picture {
-  width: 100%;
-  height: auto;
+#audio {
+  background: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#audio.muted .unmute, #audio.unmuted .mute {
+  display: none;
 }
 
 #container {
-  opacity: 0;
-  width: 1920px;
-  height: 1200px;
-  transition: opacity 1s;
+  transform-origin: 0 0;
+  width: 1511px;
+  height: 1100px;
+  margin-top: -550px;
+  margin-left: -755px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform: scale(1);
+}
+
+@media (width <= 1111px) {
+  #container {
+    margin-top: -412.5px;
+    margin-left: -566.25px;
+    transform: scale(.75);
+  }
+}
+
+@media (width <= 833px) {
+  #container {
+    margin-top: -275px;
+    margin-left: -377.5px;
+    transform: scale(.5);
+  }
+}
+
+@media (width <= 555px) {
+  #container {
+    margin-top: -137.5px;
+    margin-left: -188.75px;
+    transform: scale(.25);
+  }
 }
 
 @keyframes bounce-character {
@@ -33,8 +77,6 @@ picture {
 }
 
 #character {
-  width: 100%;
-  height: 100%;
   animation: .15s infinite alternate bounce-character;
   position: relative;
 }
@@ -45,7 +87,7 @@ picture {
 
 @keyframes bounce-body {
   0% {
-    transform: translateY(-20px);
+    transform: translateY(0);
   }
 
   100% {
@@ -57,7 +99,17 @@ picture {
   animation: .15s infinite alternate bounce-body;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 200px;
+}
+
+#teto-hat, #teto-face-1, #teto-face-2, #teto-face-3, #teto-face-4 {
+  position: absolute;
+  top: 0;
+  left: 200px;
+}
+
+#teto-face-1, #teto-face-2, #teto-face-3, #teto-face-4 {
+  opacity: 0;
 }
 
 @keyframes bounce-twintail-right {
@@ -75,6 +127,7 @@ picture {
   animation: .15s infinite alternate bounce-twintail-right;
   position: absolute;
   top: 215px;
+  left: 200px;
 }
 
 @keyframes bounce-twintail-left {
@@ -92,7 +145,7 @@ picture {
   animation: .15s infinite alternate bounce-twintail-left;
   position: absolute;
   top: 130px;
-  left: 715px;
+  left: 915px;
 }
 
 @keyframes left-hand-shake {
@@ -106,10 +159,52 @@ picture {
 }
 
 #gyu-left-hand {
+  opacity: 0;
   transform-origin: 1400px 1450px;
   animation: .15s infinite alternate left-hand-shake;
   position: absolute;
+  top: -75px;
+  left: -220px;
+}
+
+@keyframes right-hand-shake {
+  0% {
+    transform: translateY(10px)rotate(3deg);
+  }
+
+  100% {
+    transform: translateY(0)rotate(0);
+  }
+}
+
+#gyu-right-hand {
+  opacity: 0;
+  transform-origin: 650px 1450px;
+  animation: .15s infinite alternate right-hand-shake;
+  position: absolute;
   top: -65px;
-  left: -430px;
+  left: -280px;
+}
+
+#tsun-left-hand {
+  opacity: 0;
+  transform-origin: 1625px 1300px;
+  animation: .15s infinite alternate left-hand-shake;
+  position: absolute;
+  top: -75px;
+  left: -245px;
+}
+
+#tsun-right-hand {
+  opacity: 0;
+  transform-origin: 375px 1300px;
+  animation: .15s infinite alternate right-hand-shake;
+  position: absolute;
+  top: -85px;
+  left: -230px;
+}
+
+body.scene-1 #teto-face-1, body.scene-1 #gyu-left-hand, body.scene-2 #teto-face-2, body.scene-2 #tsun-right-hand, body.scene-2 #tsun-left-hand, body.scene-3 #teto-face-3, body.scene-3 #gyu-right-hand, body.scene-3 #gyu-left-hand, body.scene-4 #teto-face-4, body.scene-4 #gyu-left-hand, body.scene-5 #teto-face-2, body.scene-6 #teto-face-3 {
+  opacity: 1;
 }
 /*# sourceMappingURL=index.4d663569.css.map */
