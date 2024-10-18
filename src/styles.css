@@ -92,7 +92,7 @@ body {
 
 @keyframes bounce-body {
   0% {
-    transform: translateY(0px);
+    transform: translateY(-20px);
   }
 
   100% {
