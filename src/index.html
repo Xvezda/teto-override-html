@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="image" property="og:image" content="https://i.ytimg.com/vi/LLjfal8jCYI/maxresdefault.jpg" />
+    <title>オーバーライド</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js" defer></script>
+  </head>
+  <body class="scene-1">
+    <div id="container">
+      <div id="character">
+        <div id="teto-body">
+          <picture>
+            <source srcset="images/teto-body.png?as=avif" type="image/avif" />
+            <source srcset="images/teto-body.png?as=webp" type="image/webp" />
+            <img src="images/teto-body.png" alt="test image" />
+          </picture>
+        </div>
+        <div id="twintail-right">
+          <picture>
+            <source srcset="images/twintail-right.png?as=avif" type="image/avif" />
+            <source srcset="images/twintail-right.png?as=webp" type="image/webp" />
+            <img src="images/twintail-right.png" alt="test image" />
+          </picture>
+        </div>
+        <div id="teto-hat">
+          <picture>
+            <source srcset="images/teto-hat.png?as=avif" type="image/avif" />
+            <source srcset="images/teto-hat.png?as=webp" type="image/webp" />
+            <img src="images/teto-hat.png" alt="test image" />
+          </picture>
+        </div>
+        <div id="twintail-left">
+          <picture>
+            <source srcset="images/twintail-left.png?as=avif" type="image/avif" />
+            <source srcset="images/twintail-left.png?as=webp" type="image/webp" />
+            <img src="images/twintail-left.png" alt="test image" />
+          </picture>
+        </div>
+        <div id="teto-face-1">
+          <picture>
+            <source srcset="images/teto-face-1.png?as=avif" type="image/avif" />
+            <source srcset="images/teto-face-1.png?as=webp" type="image/webp" />
+            <img src="images/teto-face-1.png" alt="test image" />
+          </picture>
+        </div>
+        <div id="teto-face-2">
+          <picture>
+            <source srcset="images/teto-face-2.png?as=avif" type="image/avif" />
+            <source srcset="images/teto-face-2.png?as=webp" type="image/webp" />
+            <img src="images/teto-face-2.png" alt="test image" />
+          </picture>
+        </div>
+        <div id="teto-face-3">
+          <picture>
+            <source srcset="images/teto-face-3.png?as=avif" type="image/avif" />
+            <source srcset="images/teto-face-3.png?as=webp" type="image/webp" />
+            <img src="images/teto-face-3.png" alt="test image" />
+          </picture>
+        </div>
+        <div id="teto-face-4">
+          <picture>
+            <source srcset="images/teto-face-4.png?as=avif" type="image/avif" />
+            <source srcset="images/teto-face-4.png?as=webp" type="image/webp" />
+            <img src="images/teto-face-4.png" alt="test image" />
+          </picture>
+        </div>
+        <div id="gyu-left-hand">
+          <picture>
+            <source srcset="images/gyu-left-hand.png?as=avif" type="image/avif" />
+            <source srcset="images/gyu-left-hand.png?as=webp" type="image/webp" />
+            <img src="images/gyu-left-hand.png" alt="test image" />
+          </picture>
+        </div>
+        <div id="gyu-right-hand">
+          <picture>
+            <source srcset="images/gyu-right-hand.png?as=avif" type="image/avif" />
+            <source srcset="images/gyu-right-hand.png?as=webp" type="image/webp" />
+            <img src="images/gyu-right-hand.png" alt="test image" />
+          </picture>
+        </div>
+        <div id="tsun-left-hand">
+          <picture>
+            <source srcset="images/tsun-left-hand.png?as=avif" type="image/avif" />
+            <source srcset="images/tsun-left-hand.png?as=webp" type="image/webp" />
+            <img src="images/tsun-left-hand.png" alt="test image" />
+          </picture>
+        </div>
+        <div id="tsun-right-hand">
+          <picture>
+            <source srcset="images/tsun-right-hand.png?as=avif" type="image/avif" />
+            <source srcset="images/tsun-right-hand.png?as=webp" type="image/webp" />
+            <img src="images/tsun-right-hand.png" alt="test image" />
+          </picture>
+        </div>
+      </div>
+    </div>
+
+    <audio loop>
+      <source src="audios/override.mp3" type="audio/mpeg" />
+    </audio>
+    <button id="audio" class="muted">
+      <div class="mute">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-off"><path d="M16 9a5 5 0 0 1 .95 2.293"/><path d="M19.364 5.636a9 9 0 0 1 1.889 9.96"/><path d="m2 2 20 20"/><path d="m7 7-.587.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298V11"/><path d="M9.828 4.172A.686.686 0 0 1 11 4.657v.686"/></svg>
+      </div>
+      <div class="unmute">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-2"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>
+      </div>
+    </button>
+
+    <a href="https://github.com/Xvezda/teto-override-html" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a>
+  </body>
+</html>

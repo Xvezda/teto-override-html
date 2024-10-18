@@ -1,0 +1,254 @@
+* {
+  user-select: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fedd6a;
+}
+
+#audio {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#audio.muted .unmute {
+  display: none;
+}
+
+#audio.unmuted .mute {
+  display: none;
+}
+
+#container {
+  width: 1511px;
+  height: 1100px;
+  overflow: hidden;
+  transform-origin: top left;
+  transform: scale(1);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -550px;
+  margin-left: -755px;
+}
+
+@media (max-width: 1111px) {
+  #container {
+    transform: scale(0.75);
+    margin-top: -412.5px;
+    margin-left: -566.25px;
+  }
+}
+
+@media (max-width: 833px) {
+  #container {
+    transform: scale(0.5);
+    margin-top: -275px;
+    margin-left: -377.5px;
+  }
+}
+
+@media (max-width: 555px) {
+  #container {
+    transform: scale(0.25);
+    margin-top: -137.5px;
+    margin-left: -188.75px;
+  }
+}
+
+@keyframes bounce-character {
+  0% {
+    transform: translateY(50px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+#character {
+  position: relative;
+  animation: bounce-character 150ms infinite;
+  animation-direction: alternate;
+}
+
+[id^="teto-"] {
+  position: absolute;
+}
+
+@keyframes bounce-body {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+#teto-body {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  animation: bounce-body 150ms infinite;
+  animation-direction: alternate;
+}
+
+#teto-hat,
+#teto-face-1,
+#teto-face-2,
+#teto-face-3,
+#teto-face-4 {
+  position: absolute;
+  top: 0;
+  left: 200px;
+}
+
+#teto-face-1,
+#teto-face-2,
+#teto-face-3,
+#teto-face-4 {
+  opacity: 0;
+}
+
+@keyframes bounce-twintail-right {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+#twintail-right {
+  position: absolute;
+  top: 215px;
+  left: 200px;
+  transform-origin: 300px 90px;
+  animation: bounce-twintail-right 150ms infinite;
+  animation-direction: alternate;
+}
+
+@keyframes bounce-twintail-left {
+  0% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+#twintail-left {
+  position: absolute;
+  top: 130px;
+  left: 915px;
+  transform-origin: 0px 100px;
+  animation: bounce-twintail-left 150ms infinite;
+  animation-direction: alternate;
+}
+
+@keyframes left-hand-shake {
+  0% {
+    transform: translateY(10px) rotate(-3deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+#gyu-left-hand {
+  opacity: 0;
+  position: absolute;
+  top: -75px;
+  left: -220px;
+  transform-origin: 1400px 1450px;
+  animation: left-hand-shake 150ms infinite;
+  animation-direction: alternate;
+}
+
+@keyframes right-hand-shake {
+  0% {
+    transform: translateY(10px) rotate(3deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+#gyu-right-hand {
+  opacity: 0;
+  position: absolute;
+  top: -65px;
+  left: -280px;
+  transform-origin: 650px 1450px;
+  animation: right-hand-shake 150ms infinite;
+  animation-direction: alternate;
+}
+
+#tsun-left-hand {
+  opacity: 0;
+  position: absolute;
+  top: -75px;
+  left: -245px;
+  transform-origin: 1625px 1300px;
+  animation: left-hand-shake 150ms infinite;
+  animation-direction: alternate;
+}
+
+#tsun-right-hand {
+  opacity: 0;
+  position: absolute;
+  top: -85px;
+  left: -230px;
+  transform-origin: 375px 1300px;
+  animation: right-hand-shake 150ms infinite;
+  animation-direction: alternate;
+}
+
+body.scene-1 #teto-face-1,
+body.scene-1 #gyu-left-hand {
+  opacity: 1;
+}
+
+body.scene-2 #teto-face-2,
+body.scene-2 #tsun-right-hand,
+body.scene-2 #tsun-left-hand {
+  opacity: 1;
+}
+
+body.scene-3 #teto-face-3,
+body.scene-3 #gyu-right-hand,
+body.scene-3 #gyu-left-hand {
+  opacity: 1;
+}
+
+body.scene-4 #teto-face-4,
+body.scene-4 #gyu-left-hand {
+  opacity: 1;
+}
+
+body.scene-5 #teto-face-2 {
+  opacity: 1;
+}
+
+body.scene-6 #teto-face-3 {
+  opacity: 1;
+}

@@ -1,0 +1,18 @@
+{
+  "name": "teto-override-html",
+  "version": "0.0.0",
+  "author": "Xvezda <xvezda@naver.com>",
+  "license": "CC-BY-NC-SA-4.0",
+  "private": true,
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build --public-url /teto-override-html/",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0",
+    "parcel": "^2.12.0",
+    "sharp": "^0.31.1"
+  }
+}
