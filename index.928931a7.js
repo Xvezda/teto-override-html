@@ -1,2 +1,0 @@
-window.onload=function(){let e=0,n=["scene-1","scene-1","scene-1","scene-1","scene-2","scene-3","scene-2","scene-3","scene-2","scene-3","scene-2","scene-3","scene-4","scene-4","scene-4","scene-4","scene-2","scene-3","scene-2","scene-3","scene-2","scene-3","scene-2","scene-3"];setInterval(()=>{e++,document.body.className=n[e%n.length]},1200);let c=document.getElementById("audio");c.addEventListener("click",()=>{let e=document.querySelector("audio");e.paused?(e.play(),c.className="unmuted"):(e.pause(),c.className="muted")})};
-//# sourceMappingURL=index.928931a7.js.map
