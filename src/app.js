@@ -30,7 +30,8 @@ window.onload = function() {
         document.body.className = `scene-${e.key}`;
         break;
       case '0':
-        setInterval(nextScene, 300 * 4);
+        clearInterval(interval);
+        interval = setInterval(nextScene, 300 * 4);
         break;
       default:
         break;
