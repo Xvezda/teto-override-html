@@ -1,5 +1,6 @@
 window.onload = function() {
   let currentScene = 0;
+
   const scenes = [
     'scene-1', 'scene-1', 'scene-1', 'scene-1',
     'scene-2', 'scene-3', 'scene-2', 'scene-3',
@@ -30,6 +31,7 @@ window.onload = function() {
         document.body.className = `scene-${e.key}`;
         break;
       case '0':
+        currentScene = 0;
         clearInterval(interval);
         interval = setInterval(nextScene, 300 * 4);
         break;
