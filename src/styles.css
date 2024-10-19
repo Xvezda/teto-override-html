@@ -82,7 +82,7 @@ body {
 
 #character {
   position: relative;
-  animation: bounce-character 150ms infinite;
+  animation: bounce-character 147.06ms infinite;
   animation-direction: alternate;
 }
 
@@ -104,7 +104,7 @@ body {
   position: absolute;
   top: 0;
   left: 200px;
-  animation: bounce-body 150ms infinite;
+  animation: bounce-body 147.06ms infinite;
   animation-direction: alternate;
 }
 
@@ -140,7 +140,7 @@ body {
   top: 215px;
   left: 200px;
   transform-origin: 300px 90px;
-  animation: bounce-twintail-right 150ms infinite;
+  animation: bounce-twintail-right 147.06ms infinite;
   animation-direction: alternate;
 }
 
@@ -159,7 +159,7 @@ body {
   top: 130px;
   left: 915px;
   transform-origin: 0px 100px;
-  animation: bounce-twintail-left 150ms infinite;
+  animation: bounce-twintail-left 147.06ms infinite;
   animation-direction: alternate;
 }
 
@@ -179,7 +179,7 @@ body {
   top: -75px;
   left: -220px;
   transform-origin: 1400px 1450px;
-  animation: left-hand-shake 150ms infinite;
+  animation: left-hand-shake 147.06ms infinite;
   animation-direction: alternate;
 }
 
@@ -199,7 +199,7 @@ body {
   top: -65px;
   left: -280px;
   transform-origin: 650px 1450px;
-  animation: right-hand-shake 150ms infinite;
+  animation: right-hand-shake 147.06ms infinite;
   animation-direction: alternate;
 }
 
@@ -209,7 +209,7 @@ body {
   top: -75px;
   left: -245px;
   transform-origin: 1625px 1300px;
-  animation: left-hand-shake 150ms infinite;
+  animation: left-hand-shake 147.06ms infinite;
   animation-direction: alternate;
 }
 
@@ -219,7 +219,7 @@ body {
   top: -85px;
   left: -230px;
   transform-origin: 375px 1300px;
-  animation: right-hand-shake 150ms infinite;
+  animation: right-hand-shake 147.06ms infinite;
   animation-direction: alternate;
 }
 
