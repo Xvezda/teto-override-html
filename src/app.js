@@ -33,6 +33,7 @@ window.onload = function() {
         if (e.key === '0') {
           currentScene = 0;
           interval = setInterval(nextScene, 294 * 4);
+          document.body.className = 'scene-1';
         } else {
           document.body.className = `scene-${e.key}`;
         }
