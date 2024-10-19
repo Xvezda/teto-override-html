@@ -22,7 +22,7 @@ window.onload = function() {
     }
   };
 
-  let interval = setInterval(nextScene, 300 * 4);
+  let interval = setInterval(nextScene, 294 * 4);
 
   window.addEventListener('keydown', (e) => {
     switch (e.key) {
@@ -32,7 +32,7 @@ window.onload = function() {
 
         if (e.key === '0') {
           currentScene = 0;
-          interval = setInterval(nextScene, 300 * 4);
+          interval = setInterval(nextScene, 294 * 4);
         } else {
           document.body.className = `scene-${e.key}`;
         }
