@@ -26,23 +26,25 @@ window.onload = function() {
 
   window.addEventListener('keydown', (e) => {
     switch (e.key) {
-      case '1': case '2': case '3': case '4': case '5': case '6':
+      case '0': case '1': case '2': case '3': case '4': case '5': case '6':
+        e.preventDefault();
         clearInterval(interval);
-        document.body.className = `scene-${e.key}`;
-        break;
-      case '0':
-        currentScene = 0;
-        clearInterval(interval);
-        interval = setInterval(nextScene, 300 * 4);
+
+        if (e.key === '0') {
+          currentScene = 0;
+          interval = setInterval(nextScene, 300 * 4);
+        } else {
+          document.body.className = `scene-${e.key}`;
+        }
         break;
       default:
         break;
     }
   });
 
-  const audioButton = document.getElementById('audio');
+  const audio = document.querySelector('audio');
+  const audioButton = document.querySelector('#audio');
   audioButton.addEventListener('click', () => {
-    const audio = document.querySelector('audio');
     if (audio.paused) {
       audio.play();
       audioButton.className = 'unmuted';
