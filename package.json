@@ -11,8 +11,10 @@
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "@parcel/packager-raw-url": "2.15.4",
+    "@parcel/transformer-webmanifest": "2.15.4",
     "gh-pages": "^6.2.0",
     "parcel": "^2.15.4",
-    "sharp": "^0.31.1"
+    "sharp": "^0.33.5"
   }
 }
